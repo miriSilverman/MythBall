@@ -25,7 +25,6 @@ public class Turning : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // room.transform.DORotate(new Vector3(0, 90, 0), 0.3f);
 
         if (other.gameObject.CompareTag("Ball"))
         {
