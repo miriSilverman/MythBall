@@ -64,18 +64,17 @@ public class Turning : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
 
-        // if (other.gameObject.CompareTag("Ball"))
-        // {
-        //     switch (numOfCube)
-        //     {
-        //         case 1:
-        //             room.transform.DORotate(new Vector3(0, 0, 90), 10f);
-        //             break;
-        //         case 2:
-        //             room.transform.DORotate(new Vector3(0, 0, -90), 10f);
-        //             break;
-        //
-        //     }
-        // }
+        if (other.gameObject.CompareTag("Ball"))
+        {
+            switch (numOfCube)
+            {
+                 case 1:
+                     room.transform.DORotate(new Vector3(0, 0, 90), 10f);
+                     break;
+                 case 2:
+                     room.transform.DORotate(new Vector3(0, 0, -90), 10f);
+                     break;
+            }
+        }
     }
 }

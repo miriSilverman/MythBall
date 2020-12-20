@@ -7,14 +7,14 @@ public class Room : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
 
-    private bool _dragging = false;
+    public bool _dragging = false;
 
-    private Rigidbody _rb;
+    public Rigidbody rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -23,23 +23,26 @@ public class Room : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _dragging = false;
+            Debug.Log("mouse left");
         }   
     }
 
     private void OnMouseDrag()
     {
         _dragging = true;
+        Debug.Log("mouse detected" + Input.GetAxis("Mouse X"));
     }
 
     private void FixedUpdate()
     {
         if (_dragging)
         {
-            float x = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
-            float y = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+            Debug.Log("dragging");
+            float x = Input.GetAxis("Mouse X") * rotationSpeed;
+            float y = Input.GetAxis("Mouse Y") * rotationSpeed;
             
-            _rb.AddTorque(Vector3.down * x);
-            _rb.AddTorque(Vector3.right * y);
+            rb.AddTorque(Vector3.down * x);
+            rb.AddTorque(Vector3.right * y);
         }
     }
 }
