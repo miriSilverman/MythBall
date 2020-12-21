@@ -6,10 +6,9 @@ PhysicMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FloorBasic
+  m_Name: Glass
   dynamicFriction: 0.4
-  staticFriction: 0.26
->>>>>>> 0bf01c0f8aeebbe3e8919b7eef7c9e4466e0b3a8
+  staticFriction: 1
   bounciness: 0
-  frictionCombine: 3
-  bounceCombine: 1
+  frictionCombine: 0
+  bounceCombine: 0
