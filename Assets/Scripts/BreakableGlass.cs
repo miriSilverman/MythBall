@@ -18,15 +18,23 @@ public class BreakableGlass : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("hit");
+    }
+
     private void OnCollisionEnter(Collision other)
     {
-        
+        foreach (ContactPoint contact in other.contacts)
+        {
+            Debug.Log(contact.thisCollider.name);
+        }
         float collisionForce = other.impulse.magnitude / Time.fixedDeltaTime;
         Debug.Log("glass hit with force" + collisionForce);
 
         if (collisionForce > forceThreshold)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }

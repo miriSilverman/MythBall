@@ -41,8 +41,8 @@ public class Room : MonoBehaviour
             float x = Input.GetAxis("Mouse X") * rotationSpeed;
             float y = Input.GetAxis("Mouse Y") * rotationSpeed;
             
-            rb.AddTorque(Vector3.down * x);
-            rb.AddTorque(Vector3.right * y);
+            rb.AddTorque(Vector3.down * x, ForceMode.Impulse);
+            rb.AddTorque(Vector3.right * y, ForceMode.Impulse);
         }
     }
 }
