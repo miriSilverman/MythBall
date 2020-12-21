@@ -22,7 +22,7 @@ public class BreakableGlass : MonoBehaviour
     {
         foreach (ContactPoint contact in other.contacts)
         {
-            Debug.Log(contact.thisCollider.name);
+            
             
             if (contact.thisCollider.name.Equals("Glass"))
             {
