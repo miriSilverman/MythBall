@@ -10,13 +10,11 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private GameObject room;
-
+    
+    
     private Rigidbody _rb;
-    private bool _inWindArea;
-    private GameObject _windArea;
-    private WindArea _windAreaS;
-    
-    
+    private bool _inWindArea = false;
+    private WindArea _windArea;
     
     void Start()
     {
@@ -26,10 +24,9 @@ public class Ball : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (_inWindArea)
         {
-            _rb.AddForce(_windAreaS.direction * _windAreaS.strength);
+            _rb.AddForce(_windArea.direction * _windArea.strength);
         }
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         
@@ -41,17 +38,16 @@ public class Ball : MonoBehaviour
 
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("windArea"))
+        if (other.CompareTag("windArea"))
         {
             _inWindArea = true;
-            _windArea = other.gameObject;
-            _windAreaS = _windArea.GetComponent<WindArea>();
-
+            _windArea = other.gameObject.GetComponent<WindArea>();
         }
+        
     }
+
 
     private void OnTriggerExit(Collider other)
     {
