@@ -27,7 +27,7 @@ public class BreakableGlass : MonoBehaviour
             if (contact.thisCollider.name.Equals("Glass"))
             {
                 float collisionForce = other.impulse.magnitude / Time.fixedDeltaTime;
-                Debug.Log("glass hit with force" + collisionForce);
+                // Debug.Log("glass hit with force" + collisionForce);
 
                 if (collisionForce > forceThreshold)
                 {
