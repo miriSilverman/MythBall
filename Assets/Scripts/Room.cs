@@ -47,11 +47,11 @@ public class Room : MonoBehaviour
                 if (Input.mousePosition.x < playerScreenPoint.x)
                 {
                     sign = -1;
-                    Debug.Log("mouse is to the left");
+                    // Debug.Log("mouse is to the left");
                 }
                 else
                 {
-                    Debug.Log("mouse is to the right");
+                    // Debug.Log("mouse is to the right");
                 }
                 rb.AddTorque(Vector3.forward * (y * sign), ForceMode.Impulse);
             }
