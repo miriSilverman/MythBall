@@ -61,6 +61,11 @@ public class Room : MonoBehaviour
                 rb.AddTorque(Vector3.down * x, ForceMode.Impulse);
                 rb.AddTorque(Vector3.right * y, ForceMode.Impulse);
             }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
     }
 }

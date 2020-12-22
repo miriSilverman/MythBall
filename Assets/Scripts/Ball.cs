@@ -10,7 +10,12 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private GameObject room;
-    
+    public Transform child;
+ 
+    void Update ()
+    {
+        child.transform.rotation = Quaternion.Euler (0.0f, 0.0f, gameObject.transform.rotation.z * -1.0f);
+    }
     
     private Rigidbody _rb;
     private bool _inWindArea = false;
@@ -28,9 +33,9 @@ public class Ball : MonoBehaviour
         {
             _rb.AddForce(_windArea.direction * _windArea.strength);
         }
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        //Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         
-        _rb.AddForce(movement*speed);
+        //_rb.AddForce(movement*speed);
     }
     private void OnMouseDown()
     {
