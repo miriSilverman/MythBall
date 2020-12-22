@@ -21,8 +21,6 @@ public class PointPuller : MonoBehaviour
         {
             Vector3 v = transform.position - ball.transform.position;
             _rb.AddForce(force * Time.smoothDeltaTime * v.normalized );
-
-
         }
     }
 
