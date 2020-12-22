@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
     private void OpenGate()
     {
         Debug.Log("COLLECTED ALL DIAMONDS");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     
 }
