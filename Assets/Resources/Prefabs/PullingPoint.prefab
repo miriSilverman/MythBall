@@ -58,4 +58,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5.7367516
-  m_Center: {x: -13.283161, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
