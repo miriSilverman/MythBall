@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
     [SerializeField] private GameObject door;
     private int _remainedCollectors = 2;
-    // Start is called before the first frame update
+    
     void Start()
     {
         if (Instance == null)

@@ -7,13 +7,14 @@ using UnityEngine.Rendering;
 public class MakeTransparent : MonoBehaviour
 {
     [SerializeField] private Renderer renderer;
-    [SerializeField] private GameObject curObj;
-    [SerializeField] private Transform roomTransform;
+    // [SerializeField] private GameObject curObj;
+    // [SerializeField] private Transform roomTransform;
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform ballTransform;
-    [SerializeField] private float upperAngle;
-    [SerializeField] private float lowerAngle;
-    [SerializeField] private String tag;
+    // [SerializeField] private float upperAngle;
+    // [SerializeField] private float lowerAngle;
+    // [SerializeField] private String tag;
+    [SerializeField] private int layerNum;
 
 
     void Update()
@@ -21,7 +22,7 @@ public class MakeTransparent : MonoBehaviour
         
         var ray = new Ray(cameraTransform.position, ballTransform.position - cameraTransform.position);
         RaycastHit hit;
-        LayerMask mask = 1 << 8;
+        LayerMask mask = 1 << layerNum;
         if (Physics.Raycast(ray, out hit,Vector3.Distance(cameraTransform.position, ballTransform.position), mask))
         {
             GameObject go = hit.transform.gameObject;
@@ -32,7 +33,7 @@ public class MakeTransparent : MonoBehaviour
             {
                 // Debug.Log(go.name);
 
-                // renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
+                renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
 
             }
             else
@@ -42,6 +43,11 @@ public class MakeTransparent : MonoBehaviour
             
             }
 
+        }else
+        {
+            renderer.shadowCastingMode = ShadowCastingMode.On;
+
+            
         }
   
      
