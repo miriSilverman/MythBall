@@ -636,7 +636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7008862422040674, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.6
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 7008862422040674, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -644,7 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7008862422040674, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -34
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 7008862422040674, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3507,7 +3507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1786496269
 Transform:
   m_ObjectHideFlags: 0
@@ -3516,8 +3516,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786496268}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.63, y: 24.5, z: -26.95}
-  m_LocalScale: {x: 5, y: 0.19999999, z: 5}
+  m_LocalPosition: {x: 14.94, y: 21, z: -11.8}
+  m_LocalScale: {x: 9.07, y: 0.19999999, z: 8.37}
   m_Children: []
   m_Father: {fileID: 939321258}
   m_RootOrder: 5
@@ -5269,7 +5269,7 @@ GameObject:
   - component: {fileID: 3334194493727849926}
   m_Layer: 0
   m_Name: Breaking_Glass
-  m_TagString: Untagged
+  m_TagString: Glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5585,8 +5585,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &4229460202786900512
-BoxCollider:
+--- !u!64 &4229460202786900512
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5595,9 +5595,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0644453, y: 1.3537366, z: 1.5490061}
-  m_Center: {x: 0, y: 0, z: 0.00000011920929}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1291691915749520078, guid: e2ed6bdac18e6e549948c565d8953504, type: 3}
 --- !u!33 &4236957969201365890
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6381,7 +6382,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: e2ed6bdac18e6e549948c565d8953504, type: 3}
+  - {fileID: 2100000, guid: cdbbc5342405e0248bbfa729ad4f84b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6547,8 +6548,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &7370583506478729579
-BoxCollider:
+--- !u!64 &7370583506478729579
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6557,9 +6558,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.064446, y: 1.3537375, z: 1.5490068}
-  m_Center: {x: 0.000000059604645, y: 0.000000059604645, z: -0.000000059604645}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8849102749592933179, guid: e2ed6bdac18e6e549948c565d8953504, type: 3}
 --- !u!1 &7462657855789240780
 GameObject:
   m_ObjectHideFlags: 0
@@ -7019,8 +7021,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &8538751546293610779
-BoxCollider:
+--- !u!64 &8538751546293610779
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7029,9 +7031,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0644457, y: 1.353737, z: 1.5490061}
-  m_Center: {x: 0.000000059604645, y: 0, z: 0.00000011920929}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1102451449811611751, guid: e2ed6bdac18e6e549948c565d8953504, type: 3}
 --- !u!33 &8601403371500783457
 MeshFilter:
   m_ObjectHideFlags: 0
