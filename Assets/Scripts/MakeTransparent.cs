@@ -5,10 +5,10 @@ using UnityEngine.Rendering;
 
 public class MakeTransparent : MonoBehaviour
 {
-    // [SerializeField] private MeshRenderer renderer;
+    [SerializeField] private Renderer renderer;
 
     [SerializeField] private Transform roomTransform;
-    [SerializeField] private Transform cameraTransform;
+    // [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform ballTransform;
     [SerializeField] private float upperAngle;
     [SerializeField] private float lowerAngle;
@@ -22,7 +22,6 @@ public class MakeTransparent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // float x = roomTransform.rotation.x;
         
         
         // RaycastHit hit = new RaycastHit();
@@ -43,15 +42,18 @@ public class MakeTransparent : MonoBehaviour
         //         seePlayer = true;
         // }
 
-        // if (x > lowerAngle && x < upperAngle)
-        // {
-        //     renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
-        // }
-        // else
-        // {
-        //     // Debug.Log(x);
-        //     renderer.shadowCastingMode = ShadowCastingMode.On;
-        //      
-        // }
+        float x = roomTransform.rotation.x;
+        Debug.Log(x);
+
+
+        if (x > lowerAngle && x < upperAngle)
+        {
+            renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
+        }
+        else
+        {
+            renderer.shadowCastingMode = ShadowCastingMode.On;
+             
+        }
     }
 }

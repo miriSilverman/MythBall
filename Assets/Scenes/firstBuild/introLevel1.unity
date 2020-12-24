@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 15493182}
   - component: {fileID: 15493181}
   - component: {fileID: 15493180}
+  - component: {fileID: 15493183}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -218,6 +219,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15493178}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &15493183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15493178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de4ff5172fcc0f44ae48792c4b9eb48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 15493181}
+  roomTransform: {fileID: 939321258}
+  ballTransform: {fileID: 1872420644}
+  upperAngle: -0.3
+  lowerAngle: -0.8
 --- !u!1001 &42878425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +435,10 @@ PrefabInstance:
     - target: {fileID: 7008862422040685, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008862422040686, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7008862422040686, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_CollisionDetection
@@ -738,6 +760,7 @@ GameObject:
   - component: {fileID: 550864406}
   - component: {fileID: 550864405}
   - component: {fileID: 550864404}
+  - component: {fileID: 550864407}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -821,6 +844,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550864402}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &550864407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550864402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de4ff5172fcc0f44ae48792c4b9eb48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 550864405}
+  roomTransform: {fileID: 939321258}
+  ballTransform: {fileID: 1872420644}
+  upperAngle: 0.9
+  lowerAngle: 0.6
 --- !u!1 &551887207
 GameObject:
   m_ObjectHideFlags: 0
