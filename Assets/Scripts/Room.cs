@@ -8,6 +8,7 @@ public class Room : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float stabilizationSpeed;
+    [SerializeField] private float maxVelocity = 15f;
 
     private bool _dragging = false;
     private bool isStablizing = false; 
@@ -19,6 +20,7 @@ public class Room : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb.maxAngularVelocity = maxVelocity;
         stablizedVectors = new[]
         {
             transform.forward, -transform.forward, transform.right, -transform.right, transform.up, -transform.up
