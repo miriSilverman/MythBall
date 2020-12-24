@@ -7,6 +7,9 @@ TagManager:
   - Turn
   - Ball
   - windArea
+  - Floor
+  - ceil
+  - room
   layers:
   - Default
   - TransparentFX

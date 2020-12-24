@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -8,52 +9,50 @@ public class MakeTransparent : MonoBehaviour
     [SerializeField] private Renderer renderer;
 
     [SerializeField] private Transform roomTransform;
-    // [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform ballTransform;
     [SerializeField] private float upperAngle;
     [SerializeField] private float lowerAngle;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private String tag;
 
-    // Update is called once per frame
+
     void Update()
     {
-        
-        
-        // RaycastHit hit = new RaycastHit();
-        // var ray = Physics.Linecast(cameraTransform.position, ballTransform.position, out hit);
-        // if (ray)
-        // {
-        //     hit.
-        //     Debug.Log("blocked");
-        // }
+        var ray = new Ray(cameraTransform.position, ballTransform.position - cameraTransform.position);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            GameObject go = hit.transform.gameObject;
+           
+            if (go.name == "BoxRoom")
+            {
+                // Debug.Log(go.name);
+
+                renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
+
+            }
+            else
+            {
+                renderer.shadowCastingMode = ShadowCastingMode.On;
+
+            
+            }
+
+        }
+  
      
-        // if(Physics.Raycast(cameraTransform.position, cameraTransform.position - ballTransform.position, out hit))
+        // float x = roomTransform.rotation.x;
+        // // Debug.Log(x);
+        //
+        //
+        // if (x > lowerAngle && x < upperAngle)
         // {
-        //     if (hit.)
-        //     {
-        //         
-        //     }
-        //     if(hit.gameObject.tag == player.tag && Vector3.Angle(enemy.transform.forward, enemy.transform.position - player.transform.position) <= fieldOfView / 2)
-        //         seePlayer = true;
+        //     renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
         // }
-
-        float x = roomTransform.rotation.x;
-        // Debug.Log(x);
-
-
-        if (x > lowerAngle && x < upperAngle)
-        {
-            renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
-        }
-        else
-        {
-            renderer.shadowCastingMode = ShadowCastingMode.On;
-             
-        }
+        // else
+        // {
+        //     renderer.shadowCastingMode = ShadowCastingMode.On;
+        //      
+        // }
     }
 }

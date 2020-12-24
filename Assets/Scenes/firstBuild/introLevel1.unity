@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 15493183}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,9 +233,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderer: {fileID: 15493181}
   roomTransform: {fileID: 939321258}
+  cameraTransform: {fileID: 498602397}
   ballTransform: {fileID: 1872420644}
   upperAngle: -0.3
   lowerAngle: -0.8
+  tag: room
 --- !u!1001 &42878425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -763,7 +765,7 @@ GameObject:
   - component: {fileID: 550864407}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -858,9 +860,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderer: {fileID: 550864405}
   roomTransform: {fileID: 939321258}
+  cameraTransform: {fileID: 498602397}
   ballTransform: {fileID: 1872420644}
   upperAngle: 0.9
   lowerAngle: 0.6
+  tag: room
 --- !u!1 &551887207
 GameObject:
   m_ObjectHideFlags: 0
