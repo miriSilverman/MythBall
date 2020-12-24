@@ -32,7 +32,7 @@ public class MakeTransparent : MonoBehaviour
             {
                 // Debug.Log(go.name);
 
-                renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
+                // renderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
 
             }
             else
