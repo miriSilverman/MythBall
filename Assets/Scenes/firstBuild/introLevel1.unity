@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 15493181}
   - component: {fileID: 15493180}
   - component: {fileID: 15493183}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: room
   m_Icon: {fileID: 0}
@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 15493181}
+  curObj: {fileID: 15493178}
   roomTransform: {fileID: 939321258}
   cameraTransform: {fileID: 498602397}
   ballTransform: {fileID: 1872420644}
@@ -763,7 +764,7 @@ GameObject:
   - component: {fileID: 550864405}
   - component: {fileID: 550864404}
   - component: {fileID: 550864407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: room
   m_Icon: {fileID: 0}
@@ -859,6 +860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 550864405}
+  curObj: {fileID: 550864402}
   roomTransform: {fileID: 939321258}
   cameraTransform: {fileID: 498602397}
   ballTransform: {fileID: 1872420644}
@@ -1794,7 +1796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939435887}
   - component: {fileID: 939435888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ceil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2434,7 +2436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312077181}
   - component: {fileID: 1312077182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
