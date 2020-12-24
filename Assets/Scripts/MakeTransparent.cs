@@ -43,7 +43,7 @@ public class MakeTransparent : MonoBehaviour
         // }
 
         float x = roomTransform.rotation.x;
-        Debug.Log(x);
+        // Debug.Log(x);
 
 
         if (x > lowerAngle && x < upperAngle)
