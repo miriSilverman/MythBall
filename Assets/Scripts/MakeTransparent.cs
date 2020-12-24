@@ -25,7 +25,7 @@ public class MakeTransparent : MonoBehaviour
         if (Physics.Raycast(ray, out hit,Vector3.Distance(cameraTransform.position, ballTransform.position), mask))
         {
             GameObject go = hit.transform.gameObject;
-            Debug.Log(go.name);
+            // Debug.Log(go.name);
            
             // if (go == curObj)
             if (go.name == "BoxRoom")

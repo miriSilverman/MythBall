@@ -1742,6 +1742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 700000
+  stabilizationSpeed: 1
   rb: {fileID: 939321257}
 --- !u!54 &939321257
 Rigidbody:
