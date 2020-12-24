@@ -57,11 +57,6 @@ public class Room : MonoBehaviour
                 if (Input.mousePosition.x < playerScreenPoint.x)
                 {
                     sign = -1;
-                    // Debug.Log("mouse is to the left");
-                }
-                else
-                {
-                    // Debug.Log("mouse is to the right");
                 }
                 rb.AddTorque(Vector3.forward * (y * sign), ForceMode.Impulse);
             }
@@ -76,28 +71,28 @@ public class Room : MonoBehaviour
         else
         {
             
-            
-            if (rb.angularVelocity.magnitude < 0.01f)
-            {
-                if (!isStablizing)
-                {
-                    isStablizing = true;
-                    Stablize();
-                    Debug.DrawLine(rb.position, rb.position+transform.forward*10, Color.red, 3f);
-                    Debug.DrawLine(rb.position, rb.position+closestAxis*10, Color.blue, 3f);
-                }
-                
-                rb.angularVelocity = Vector3.zero;
-                
-                Quaternion newRotation1 = Quaternion.FromToRotation(transform.forward, closestAxis);
-                newRotation1 = Quaternion.Lerp(Quaternion.LookRotation(transform.forward), Quaternion.LookRotation(closestAxis),
-                    Time.fixedDeltaTime * stabilizationSpeed);
-                
-                
-
-                rb.MoveRotation(newRotation1); 
-                
-            }
+            //
+            // if (rb.angularVelocity.magnitude < 0.01f)
+            // {
+            //     if (!isStablizing)
+            //     {
+            //         isStablizing = true;
+            //         Stablize();
+            //         Debug.DrawLine(rb.position, rb.position+transform.forward*10, Color.red, 3f);
+            //         Debug.DrawLine(rb.position, rb.position+closestAxis*10, Color.blue, 3f);
+            //     }
+            //     
+            //     rb.angularVelocity = Vector3.zero;
+            //     
+            //     Quaternion newRotation1 = Quaternion.FromToRotation(transform.forward, closestAxis);
+            //     newRotation1 = Quaternion.Lerp(Quaternion.LookRotation(transform.forward), Quaternion.LookRotation(closestAxis),
+            //         Time.fixedDeltaTime * stabilizationSpeed);
+            //     
+            //     
+            //
+            //     rb.MoveRotation(newRotation1); 
+            //     
+            // }
         }
     }
 
