@@ -644,7 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7008862422040674, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -36
+      value: -9.3
       objectReference: {fileID: 0}
     - target: {fileID: 7008862422040674, guid: 97a23ad9c73d34c43b61c0029016990c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2218,8 +2218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 700000
-  stabilizationSpeed: 1
-  maxVelocity: 5
   rb: {fileID: 939321257}
 --- !u!54 &939321257
 Rigidbody:
@@ -2577,7 +2575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8773a7db6301d2499398797997490f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 5064873315870626045}
 --- !u!4 &1166167141
 Transform:
   m_ObjectHideFlags: 0

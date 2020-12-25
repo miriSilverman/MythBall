@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController Instance;
-    [SerializeField] private GameObject door;
-    private int _remainedCollectors = 2;
-    
+    public static GameController Instance; 
+    private int _remainedCollectors = 3;
+    // Start is called before the first frame update
     void Start()
     {
         if (Instance == null)
@@ -35,8 +34,7 @@ public class GameController : MonoBehaviour
     private void OpenGate()
     {
         Debug.Log("COLLECTED ALL DIAMONDS");
-        door.SetActive(false);
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     
 }
