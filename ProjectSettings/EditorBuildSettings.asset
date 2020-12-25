@@ -6,17 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/firstBuild/StartMenu.unity
+    path: Assets/Scenes/realGame/StartMenu.unity
     guid: 237f2efde0cae8d48b4023525e2a8ad5
   - enabled: 1
-    path: Assets/Scenes/firstBuild/introLevel1.unity
-    guid: 06103638713e57a4a9d95742734c46ea
+    path: Assets/Scenes/realGame/level1.unity
+    guid: e6679a20dcb88234f800c7f1d62a6d10
   - enabled: 1
-    path: Assets/Scenes/firstBuild/level2.unity
-    guid: b1471376e7e8bb34282df1cc18c9f679
-  - enabled: 1
-    path: Assets/Scenes/firstBuild/BreakableFloor.unity
-    guid: 0f1e88ae4018d204383faa8c11849cb3
+    path: Assets/Scenes/realGame/level2.unity
+    guid: 3a98562e54b50184ab53a6b80eb2a7ef
   - enabled: 1
     path: Assets/Scenes/firstBuild/MazeTemplate.unity
     guid: 65458a7c01de9de46af33b80c58e6c4c

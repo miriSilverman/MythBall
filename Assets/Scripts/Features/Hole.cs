@@ -10,7 +10,6 @@ public class Hole : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            Debug.Log("got here");
             Collider ball = other.gameObject.GetComponent<Collider>();
             Physics.IgnoreCollision(realHole, ball, true);
         }
@@ -21,8 +20,6 @@ public class Hole : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-
-            Debug.Log("out");
 
             Collider ball = other.gameObject.GetComponent<Collider>();
             Physics.IgnoreCollision(realHole, ball, false);

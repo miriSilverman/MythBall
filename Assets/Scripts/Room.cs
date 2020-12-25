@@ -11,13 +11,16 @@ public class Room : MonoBehaviour
 
     public Rigidbody rb;
     
-    // Start is called before the first frame update
+    [SerializeField] private float maxVelocity = 15f;
     void Start()
     {
+        rb.maxAngularVelocity = maxVelocity;
+        // stablizedVectors = new[]
+        // {
+        //     transform.forward, -transform.forward, transform.right, -transform.right, transform.up, -transform.up
+        // };
         //rb.centerOfMass = transform.position;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonUp(0))
@@ -47,11 +50,6 @@ public class Room : MonoBehaviour
                 if (Input.mousePosition.x < playerScreenPoint.x)
                 {
                     sign = -1;
-                    // Debug.Log("mouse is to the left");
-                }
-                else
-                {
-                    // Debug.Log("mouse is to the right");
                 }
                 rb.AddTorque(Vector3.forward * (y * sign), ForceMode.Impulse);
             }

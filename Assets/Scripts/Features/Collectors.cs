@@ -6,11 +6,6 @@ using DG.Tweening;
 
 public class Collectors : MonoBehaviour
 {
-    private void Start()
-    {
-        // transform.DORotate(Vector3.forward, 1.5f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
-
-    }
 
     private void Update()
     {
